@@ -59,8 +59,9 @@ public class ImmutableStackImplTest {
         stack = stack.push(2);
         stack = stack.push(3);
 
-        // Add a reference to the stack.
+        // Add a reference to the stack and check.
         cloneStack = stack;
+        Assert.assertEquals(cloneStack, stack);
 
         // Pop an element.
         stack = stack.pop();

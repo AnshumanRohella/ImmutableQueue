@@ -26,7 +26,7 @@ public final class ImmutableStackImpl<T> implements ImmutableStack<T> {
 
     @Override
     public ImmutableStack<T> pop() {
-        return this.tail;
+        return tail;
     }
 
     @Override
