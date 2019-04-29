@@ -16,6 +16,8 @@ import Exceptions.EmptyStackException;
  * in {@link ImmutableStack}. The front instance of the Queue is just replaced by the reversed
  * back stack.
  *
+ * Reference
+ * <b>https://blogs.msdn.microsoft.com/ericlippert/2007/12/10/immutability-in-c-part-four-an-immutable-queue/</b>
  * @param <T>
  * @author luci
  */
@@ -79,6 +81,10 @@ public final class ImmutableQueueImpl<T> implements ImmutableQueue<T> {
         return false;
     }
 
+    /**
+     * A singleton representing the base empty Queue.
+     * @param <T>
+     */
     private static final class EmptyBaseQueue<T> implements ImmutableQueue<T> {
 
         private static final EmptyBaseQueue emptyBaseQueue = new EmptyBaseQueue();
